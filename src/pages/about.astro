@@ -5,6 +5,7 @@ import Content from '~/components/widgets/Content.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import profileImage from '~/assets/images/mayank-bhasin-profile.jpg';
 
 const metadata = {
   title: 'About — Mayank Bhasin',
@@ -17,10 +18,8 @@ const metadata = {
   <Hero
     tagline="About Me"
     image={{
-      src: '/images/mayank-bhasin-profile.jpg',
+      src: profileImage,
       alt: 'Mayank Bhasin - AI & Automation Consultant',
-      width: 400,
-      height: 400,
     }}
   >
     <Fragment slot="title">
