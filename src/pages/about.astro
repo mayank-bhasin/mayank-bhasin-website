@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Features3 from '~/components/widgets/Features3.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
   title: 'About — Mayank Bhasin',
@@ -15,6 +16,10 @@ const metadata = {
 
   <Hero
     tagline="About Me"
+    image={{
+      src: '/images/mayank-bhasin-profile.jpg',
+      alt: 'Mayank Bhasin - AI & Automation Consultant',
+    }}
   >
     <Fragment slot="title">
       Mayank Bhasin
@@ -22,7 +27,7 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="text-lg">
-        Principal PM at Windows Engineering with 21+ years of experience across AI, Cloud, and digital transformation.
+        Global Product & Innovation Leader | 21+ Years Building Transformative Technology Solutions
       </span>
     </Fragment>
   </Hero>
@@ -33,9 +38,9 @@ const metadata = {
     title="Experience & Impact"
     stats={[
       { title: 'Years of Experience', amount: '21+' },
-      { title: 'Enterprise Programs', amount: 'AI-First' },
-      { title: 'Focus Areas', amount: '5+' },
-      { title: 'Customer Impact', amount: 'Enterprise' },
+      { title: 'Markets Served', amount: 'Global' },
+      { title: 'Focus', amount: 'AI-First' },
+      { title: 'Active Mentor', amount: '4 Programs' },
     ]}
   />
 
@@ -45,19 +50,19 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'AI Strategy & Product Leadership',
+        title: 'AI & Cloud Transformation',
         description:
-          'Leading AI-first programs and building intelligent agents that deliver measurable value to enterprise customers.',
+          'Building transformative technology solutions across AI, cloud, and digital platforms at Microsoft, Oracle, and Nokia.',
       },
       {
-        title: 'Digital Transformation',
+        title: 'Product Leadership',
         description:
-          'Driving cloud and AI adoption across large-scale enterprise environments with focus on Windows quality and telemetry.',
+          'Led multi-million-dollar portfolios delivering scalable solutions across Asia, Europe, and North America.',
       },
       {
-        title: 'Customer Programs',
+        title: 'Enterprise Solutions',
         description:
-          'Designing and executing customer success programs that bridge technology and business outcomes.',
+          'Helping enterprise customers drive adoption of Windows 11, Windows Autopatch, Copilot+ PCs, and Windows Resiliency Initiative.',
       },
     ]}
     image={{
@@ -67,11 +72,16 @@ const metadata = {
   >
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        What I Do
+        Who I Am
       </h2>
       <p class="text-muted mb-4">
-        I lead AI-first programs and build intelligent agents that ship value to enterprise customers.
-        My work spans AI strategy, product leadership, and customer programs.
+        I'm a global product and innovation leader with 21+ years of experience building transformative technology solutions across AI, cloud, and digital platforms.
+      </p>
+      <p class="text-muted mb-4">
+        At <strong>Microsoft</strong>, I am part of Windows Engineering helping enterprise customers across the UK, EMEA, and the US drive adoption of Windows 11, Windows Autopatch, and Copilot+ PCs—delivering secure, intelligent, and scalable commercial experiences including Windows Resiliency Initiative.
+      </p>
+      <p class="text-muted">
+        My passion lies in solving complex problems through AI-driven product strategy, cloud transformation, and user-centric innovation.
       </p>
     </Fragment>
   </Content>
@@ -80,44 +90,44 @@ const metadata = {
 
   <Features3
     title="Core Expertise"
-    subtitle="Areas where I can help you succeed"
+    subtitle="Deep technical knowledge across AI, cloud, and enterprise solutions"
     columns={3}
     items={[
       {
-        title: 'AI Strategy',
+        title: 'AI-Driven Product Strategy',
         description:
-          'Developing and executing AI-first strategies that align with business objectives and deliver measurable outcomes.',
+          'Building intelligent agents using Copilot and generative AI, supporting organizations in adopting AI through agent-based deployments that drive measurable business outcomes.',
         icon: 'tabler:brain',
+      },
+      {
+        title: 'Cloud Transformation',
+        description:
+          'Leading cloud adoption and digital transformation initiatives across Azure, AWS, and Oracle Cloud platforms at enterprise scale.',
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Windows Engineering',
+        description:
+          'Expert in Windows 11, Windows Autopatch, Copilot+ PCs, and Windows Resiliency Initiative for enterprise customers.',
+        icon: 'tabler:brand-windows',
       },
       {
         title: 'Product Leadership',
         description:
-          'Leading product initiatives from conception to delivery, with focus on customer value and business impact.',
+          'Led multi-million-dollar portfolios at Microsoft, Oracle, and Nokia, delivering scalable solutions across diverse global markets.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Windows Quality & Telemetry',
+        title: 'User-Centric Innovation',
         description:
-          'Expert in Windows engineering, quality assurance, and data-driven decision making through telemetry.',
-        icon: 'tabler:brand-windows',
-      },
-      {
-        title: 'Customer Programs',
-        description:
-          'Building and scaling customer success programs that drive adoption and satisfaction.',
+          'Designing secure, intelligent, and scalable commercial experiences that prioritize user needs and business outcomes.',
         icon: 'tabler:users',
       },
       {
-        title: 'Mentorship',
+        title: 'Global Enterprise Solutions',
         description:
-          'Passionate about developing the next generation of product managers and technical leaders.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Digital Transformation',
-        description:
-          'Guiding organizations through cloud and AI transformation with practical, actionable strategies.',
-        icon: 'tabler:transform',
+          'Delivering transformative solutions across UK, EMEA, US, Asia, and North America markets.',
+        icon: 'tabler:world',
       },
     ]}
   />
@@ -128,34 +138,152 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Enterprise Scale',
+        title: 'Multi-Million Dollar Portfolios',
         description:
-          '21+ years of experience working with enterprise customers and complex technical environments.',
+          'Successfully led and delivered complex, high-value product initiatives across Microsoft, Oracle, and Nokia.',
       },
       {
-        title: 'AI-First Approach',
+        title: 'Global Market Experience',
         description:
-          'Building intelligent agents and automation solutions that solve real business problems.',
+          'Proven track record delivering solutions across diverse markets from Asia to Europe and North America.',
       },
       {
-        title: 'Proven Track Record',
+        title: 'AI Agent Development',
         description:
-          'Consistently delivering value through strategic thinking, technical expertise, and customer focus.',
+          'Actively building intelligent agents using Copilot and generative AI for measurable business impact.',
       },
     ]}
   >
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Why Work With Me
+        Track Record
       </h2>
       <p class="text-muted">
-        I bring deep enterprise experience, technical expertise, and a proven track record of delivering
-        AI-first solutions that create real business value.
+        I've led multi-million-dollar portfolios at Microsoft, Oracle, and Nokia, delivering scalable solutions
+        across diverse markets—from Asia to Europe and North America. I'm deeply involved in building intelligent
+        agents using Copilot and generative AI, supporting organizations in adopting AI through agent-based
+        deployments that drive measurable business outcomes.
       </p>
     </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Mentorship Section -->
+
+  <Features3
+    title="Mentorship & Community Impact"
+    subtitle="Committed to developing the next generation of leaders"
+    columns={2}
+    items={[
+      {
+        title: 'Lead Instructor at BrainStation',
+        description:
+          'Teaching Product Leadership to aspiring product managers, helping them develop strategic thinking and execution skills.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Mentor at Femme Palette',
+        description:
+          'Supporting women in tech through mentorship, guidance, and career development.',
+        icon: 'tabler:heart-handshake',
+      },
+      {
+        title: 'Volunteer Mentor for ITSB',
+        description:
+          'Supporting young learners in their educational journey and career exploration.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Global Mentorship Initiative',
+        description:
+          'Mentoring young adults globally, helping them navigate career decisions and professional growth.',
+        icon: 'tabler:world',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800"></div>
+    </Fragment>
+  </Features3>
+
+  <!-- Certifications -->
+
+  <Features2
+    title="Certifications & Credentials"
+    subtitle="Continuous learning across AI, cloud, and product management"
+    columns={3}
+    items={[
+      {
+        title: 'Azure AI Fundamentals',
+        description: 'Microsoft Azure AI expertise',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Azure Cloud Fundamentals',
+        description: 'Microsoft Azure cloud platform',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'AWS Cloud',
+        description: 'Amazon Web Services certified',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Oracle Cloud',
+        description: 'Oracle Cloud Infrastructure',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'PMP',
+        description: 'Project Management Professional',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'DevOps & Agile',
+        description: 'Modern software practices',
+        icon: 'tabler:certificate',
+      },
+    ]}
+  />
+
+  <!-- CTA Section -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'AI Business Transformation',
+        description:
+          'Exploring how AI can transform your business with practical, agent-based deployments.',
+      },
+      {
+        title: 'Product Strategy Collaboration',
+        description:
+          'Developing innovative product strategies that deliver measurable outcomes.',
+      },
+      {
+        title: 'Mentorship & Growth',
+        description:
+          'Passionate about mentoring the next generation of tech leaders.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Let's Connect
+      </h2>
+      <p class="text-muted mb-4">
+        I'm always interested in connecting with people who are:
+      </p>
+      <ul class="text-muted list-disc list-inside space-y-2">
+        <li>Exploring how AI can transform their business</li>
+        <li>Looking to collaborate on innovative product strategies</li>
+        <li>Passionate about mentoring and professional growth</li>
+        <li>Building intelligent agents and AI-driven solutions</li>
+      </ul>
     </Fragment>
   </Content>
 </Layout>
