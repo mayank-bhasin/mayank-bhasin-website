@@ -1,0 +1,162 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Portfolio & Offerings — Mayank Bhasin',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Portfolio & Offerings"
+    title="AI & Automation Solutions"
+    subtitle="Bringing enterprise-grade AI expertise to businesses, individuals, and educational institutions across the UK."
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="offerings"
+    title="My Offerings"
+    subtitle="Comprehensive AI and automation solutions tailored to your needs"
+    items={[
+      {
+        title: 'For Small Businesses',
+        description:
+          'AI copilot implementation, workflow automation (Zapier, Make, n8n), custom GPT development, and AI strategy consulting to boost productivity and reduce operational costs.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: 'For Individuals',
+        description:
+          'Online courses, 1-on-1 coaching, bootcamps, and certification programs to help you master AI tools and advance your career in the AI-first world.',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'For Universities',
+        description:
+          'Curriculum development partnerships, guest lectures, workshops, and student training programs in AI, product management, and digital transformation.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'AI Strategy & Implementation',
+        description:
+          'From AI readiness assessments to full implementation, helping you navigate the AI landscape and deploy solutions that deliver measurable ROI.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Workflow Automation',
+        description:
+          'Eliminate repetitive tasks and streamline operations with intelligent automation using industry-leading tools and best practices.',
+        icon: 'tabler:automation',
+      },
+      {
+        title: 'Mentorship & Training',
+        description:
+          'Developing the next generation of AI practitioners and product leaders through hands-on mentorship and practical training.',
+        icon: 'tabler:certificate',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="Service Tiers"
+    subtitle="Flexible engagement models to suit your needs"
+    items={[
+      {
+        title: 'Discovery & Strategy',
+        description:
+          'AI readiness assessment, use case identification, and implementation roadmap development.',
+      },
+      {
+        title: 'Implementation',
+        description:
+          'Hands-on copilot setup, integration, team training, and process automation.',
+      },
+      {
+        title: 'Managed Service',
+        description:
+          'Ongoing optimization, support, maintenance, and monthly strategy sessions.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'AI Solutions',
+    }}
+    isReversed
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        My Approach
+      </h3>
+      <p class="text-muted">
+        I work at the system level (architecture/governance), not the keystroke level.
+        Every solution is backed by hands-on implementation experience from my work at Microsoft, Oracle, and Nokia.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    title="Key Focus Areas"
+    items={[
+      {
+        title: 'Windows Engineering Excellence',
+        description:
+          'Expertise in Windows 11, Windows Autopatch, Copilot+ PCs, and Windows Resiliency Initiative for enterprise customers.',
+      },
+      {
+        title: 'Intelligent Agent Development',
+        description:
+          'Building intelligent agents using Copilot and generative AI that drive measurable business outcomes.',
+      },
+      {
+        title: 'Cloud Transformation',
+        description:
+          'Leading cloud adoption across Azure, AWS, and Oracle Cloud platforms at enterprise scale.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Technology',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Enterprise Experience
+      </h3>
+      <p class="text-muted">
+        21+ years leading multi-million-dollar portfolios at Microsoft, Oracle, and Nokia,
+        delivering scalable solutions across global markets from Asia to Europe and North America.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Ready to Transform Your Business with AI?"
+    subtitle="Whether you're a small business looking to automate, an individual wanting to upskill, or a university seeking AI curriculum—let's talk."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get in Touch',
+        href: '/contact',
+      },
+    ]}
+  />
+</Layout>
