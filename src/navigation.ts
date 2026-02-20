@@ -71,6 +71,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/mayank-bhasin' },
   ],
   footNote: `
-    © ${new Date().getFullYear()} Mayank Bhasin. All rights reserved.
+    © ${new Date().getFullYear()} Clarity AI by Mayank Bhasin. All rights reserved.
   `,
 };

@@ -1,5 +1,5 @@
 site:
-  name: Mayank Bhasin
+  name: Clarity AI
   site: 'https://mayank-bhasin.github.io'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Mayank Bhasin - AI Strategy for Product Leaders
-    template: '%s — Mayank Bhasin'
+    default: Clarity AI - AI Strategy for Product Leaders
+    template: '%s — Clarity AI'
   description: "AI strategy for product leaders and knowledge workers. Building foundational AI capabilities with proven, practical approaches that deliver measurable impact. No jargon, just clarity."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Mayank Bhasin
+    site_name: Clarity AI
     images:
       - url: '~/assets/images/default.png'
         width: 1200
