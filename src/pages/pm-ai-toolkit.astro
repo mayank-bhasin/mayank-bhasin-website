@@ -1,0 +1,641 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Note from '~/components/widgets/Note.astro';
+
+const metadata = {
+  title: "The PM's AI Toolkit: 20+ Essential Tools for Product Managers in 2026",
+  description: 'A comprehensive guide to the AI tools every Product Manager needs to master. From research to prototyping, automation to analysis - your complete AI stack.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Free Resource for Product Managers"
+    title="The PM's AI Toolkit"
+    subtitle="20+ Essential AI Tools Every Product Manager Should Master in 2026"
+  >
+    <Fragment slot="subtitle">
+      <p class="text-lg mb-4">
+        As a Principal PM at Microsoft Windows Engineering, I've spent the last year testing, implementing, and teaching AI tools to product teams globally. This is the exact toolkit I use daily—and teach at BrainStation.
+      </p>
+      <p class="text-muted">
+        <strong>What you'll get:</strong> Tool recommendations across 5 categories, real use cases, pricing guides, quick-start templates, and my personal recommendations for each PM skill level.
+      </p>
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note
+    title="Why This Toolkit?"
+    description="I built this after answering the same question 100+ times: 'Which AI tools should I actually learn?' This isn't a comprehensive list of every tool—it's the essential stack that delivers 80% of value for product managers."
+  />
+
+  <!-- Content: Introduction -->
+
+  <section class="px-4 py-16 mx-auto max-w-6xl">
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <h2 class="text-3xl font-bold mb-6">How to Use This Toolkit</h2>
+
+      <div class="bg-blue-50 dark:bg-slate-800 p-6 rounded-lg mb-8">
+        <h3 class="text-xl font-bold mt-0 mb-4">Your Learning Path</h3>
+        <ul class="space-y-3 mb-0">
+          <li><strong>Beginner PM:</strong> Start with Category 1 (AI Assistants) and Category 2 (Research). Get comfortable before moving on.</li>
+          <li><strong>Intermediate PM:</strong> Add Category 3 (Prototyping) and Category 4 (Automation). Focus on quick wins.</li>
+          <li><strong>Advanced PM:</strong> Master Category 5 (Data & Analytics) and start building custom workflows.</li>
+        </ul>
+      </div>
+
+      <h3 class="text-2xl font-bold mb-4">Investment Guide</h3>
+      <p class="mb-4">You don't need all these tools. Here's my recommended budget:</p>
+      <ul class="mb-8">
+        <li><strong>Essential Stack (£40/month):</strong> Claude Pro + Perplexity Pro</li>
+        <li><strong>Builder Stack (£60/month):</strong> Essential + Cursor or v0.dev</li>
+        <li><strong>Full Stack (£100/month):</strong> All of the above + automation platform</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Category 1: AI Assistants -->
+
+  <Features2
+    title="Category 1: AI Assistants & Copilots"
+    subtitle="Your thinking partner for strategy, writing, and problem-solving"
+    tagline="The Foundation"
+    items={[
+      {
+        title: 'Claude (Anthropic) - Sonnet 4.5',
+        description: 'MY TOP CHOICE for PMs. Best for: Strategy docs, PRDs, complex reasoning, coding help. Context window: 200K tokens (fits entire codebases). Pricing: Free tier available, Pro £20/month.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'ChatGPT (OpenAI) - GPT-4',
+        description: 'Best for: Quick tasks, brainstorming, general writing. Plugins ecosystem is valuable. DALL-E integration for mockups. Pricing: Free tier, Plus £20/month.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Microsoft Copilot',
+        description: 'Best for: Enterprise PMs already on Microsoft 365. Integrates with Word, Excel, PowerPoint. GDPR-compliant. Pricing: £25/user/month (enterprise only).',
+        icon: 'tabler:brand-windows',
+      },
+      {
+        title: 'Gemini (Google)',
+        description: 'Best for: Integration with Google Workspace. Real-time web access. Good for research. Pricing: Free tier, Advanced £20/month.',
+        icon: 'tabler:sparkles',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Strategy Documents',
+        description: 'Use Claude to draft market analysis, competitive positioning, and go-to-market strategies. Prompt: "Act as a senior product strategist. Analyze [market] and identify 3 key opportunities for [product]."',
+      },
+      {
+        title: 'PRD Writing',
+        description: 'Generate first drafts of Product Requirements Documents. Then refine. Saves 3-5 hours per PRD. Prompt: "Draft a PRD for [feature] targeting [user] with these acceptance criteria: [list]."',
+      },
+      {
+        title: 'Meeting Preparation',
+        description: 'Prepare for exec reviews, standups, or customer calls. Prompt: "I\'m presenting [topic] to [stakeholder]. Generate 5 likely questions they\'ll ask and suggested responses."',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'PM working with AI',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Real PM Use Cases
+      </h3>
+      <p class="text-muted mb-4">
+        Here's how I actually use AI assistants in my daily work at Microsoft Windows Engineering:
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Category 2: Research Tools -->
+
+  <Features2
+    title="Category 2: Research & Intelligence"
+    subtitle="Faster, deeper research with AI-powered insights"
+    tagline="Know Your Market"
+    items={[
+      {
+        title: 'Perplexity AI',
+        description: 'MY #1 RESEARCH TOOL. AI search with sources. Best for: Market research, competitor analysis, technical documentation. Real-time web access. Pricing: Free tier, Pro £20/month (worth it).',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Elicit',
+        description: 'Best for: Academic research, literature reviews, finding papers. Extracts insights from research papers. Free for basic use, £10/month for Pro.',
+        icon: 'tabler:book',
+      },
+      {
+        title: 'Consensus',
+        description: 'Best for: Evidence-based research, finding scientific consensus. Great for health-tech, ed-tech PMs. Free tier available.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'ChatGPT with Web Browsing',
+        description: 'Best for: Quick fact-checking, recent events, current trends. Included in ChatGPT Plus (£20/month).',
+        icon: 'tabler:world',
+      },
+    ]}
+  />
+
+  <section class="px-4 py-8 mx-auto max-w-6xl">
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <div class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 p-6 rounded-lg">
+        <h3 class="text-xl font-bold mt-0 mb-3">⚡ Quick Win: Competitive Analysis in 30 Minutes</h3>
+        <p class="mb-3">Old way: 8 hours of manual research, spreadsheets, notes.</p>
+        <p class="mb-3">AI way: 30 minutes with Perplexity + Claude.</p>
+        <p class="mb-3"><strong>My exact workflow:</strong></p>
+        <ol class="mb-3">
+          <li>Perplexity: "Analyze top 5 competitors to [your product] in [market]. Focus on features, pricing, and user reviews."</li>
+          <li>Copy results to Claude: "Synthesize this competitive analysis. Create a feature comparison matrix and identify gaps we can exploit."</li>
+          <li>Export to your PRD or strategy doc.</li>
+        </ol>
+        <p class="mb-0"><strong>Time saved:</strong> 7.5 hours per competitive analysis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category 3: Prototyping & Building -->
+
+  <Features
+    title="Category 3: Prototyping & No-Code Building"
+    subtitle="Build functional MVPs without waiting for engineers"
+    tagline="PM as Builder"
+    items={[
+      {
+        title: 'v0.dev (Vercel)',
+        description: 'GAME CHANGER. Describe a UI, get working React code. Best for: Landing pages, dashboards, internal tools. Pricing: Free tier generous, Pro £20/month.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Cursor',
+        description: 'AI-native code editor. Best for: PMs learning to code, modifying AI-generated code. Built on VS Code. Pricing: Free for 2 weeks, then £20/month.',
+        icon: 'tabler:terminal',
+      },
+      {
+        title: 'Bolt.new',
+        description: 'Full-stack app generator. Prompt → deployed app in minutes. Best for: Quick MVPs, internal tools, proof-of-concepts. Pricing: Usage-based, starts free.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Lovable (formerly GPT Engineer)',
+        description: 'Natural language → full application. Best for: Non-technical PMs building SaaS MVPs. Pricing: Free tier, Pro £25/month.',
+        icon: 'tabler:app-window',
+      },
+      {
+        title: 'Replit AI',
+        description: 'Code in browser + AI assistant. Best for: Learning, quick prototypes, collaboration. Pricing: Free tier, Hacker £7/month.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'GitHub Copilot',
+        description: 'AI pair programmer. Best for: PMs who already code. Works in any IDE. Pricing: £10/month.',
+        icon: 'tabler:brand-github',
+      },
+    ]}
+  />
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Internal Dashboards',
+        description: 'Build team dashboards pulling from your APIs. Example: v0.dev to design, Cursor to customize, Vercel to deploy. 2-4 hours total.',
+      },
+      {
+        title: 'Landing Pages',
+        description: 'Validate demand before building full product. Bolt.new: "Build a landing page for [product] with hero, features, pricing, and email capture." Deploy in 30 mins.',
+      },
+      {
+        title: 'Customer Feedback Tools',
+        description: 'Custom feedback forms with analysis. Use v0.dev for UI, connect to Airtable, add Claude for sentiment analysis via Zapier.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        What You Can Build (Really)
+      </h3>
+      <p class="text-muted">
+        I'm a PM, not a software engineer. Here are 3 things I've actually shipped using these tools in the last month:
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Category 4: Automation -->
+
+  <Features2
+    title="Category 4: Automation & Workflows"
+    subtitle="Eliminate repetitive tasks, focus on strategy"
+    tagline="Work Smarter"
+    items={[
+      {
+        title: 'Zapier + AI',
+        description: 'Connect apps + add AI steps. Best for: Automating routine workflows. 2000+ integrations. Pricing: Free tier, Starter £20/month.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Make (formerly Integromat)',
+        description: 'More powerful than Zapier, steeper learning curve. Best for: Complex workflows, API work. Pricing: Free tier, Pro £9/month.',
+        icon: 'tabler:topology-star',
+      },
+      {
+        title: 'n8n',
+        description: 'Self-hosted automation (free!). Best for: Technical PMs, custom workflows, data security needs. Pricing: Free (self-hosted), Cloud from £20/month.',
+        icon: 'tabler:arrows-shuffle',
+      },
+      {
+        title: 'Notion AI',
+        description: 'AI inside your workspace. Best for: Meeting notes, summaries, content generation. Pricing: £10/month (add-on to Notion).',
+        icon: 'tabler:notes',
+      },
+    ]}
+  />
+
+  <section class="px-4 py-8 mx-auto max-w-6xl">
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <h3 class="text-2xl font-bold mb-6">5 Automations Every PM Should Build This Week</h3>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <h4 class="text-lg font-bold mb-3">1. Meeting Notes → Action Items</h4>
+          <p class="text-sm mb-2"><strong>Tools:</strong> Otter.ai + Zapier + ChatGPT + Slack</p>
+          <p class="text-sm mb-2"><strong>Flow:</strong> Meeting ends → Otter transcribes → Zapier sends to ChatGPT → Extract action items → Post to Slack</p>
+          <p class="text-sm mb-0"><strong>Time saved:</strong> 15 mins per meeting</p>
+        </div>
+
+        <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <h4 class="text-lg font-bold mb-3">2. Customer Feedback → Insights</h4>
+          <p class="text-sm mb-2"><strong>Tools:</strong> Typeform + Make + Claude + Notion</p>
+          <p class="text-sm mb-2"><strong>Flow:</strong> Feedback submitted → Make triggers → Claude analyzes sentiment + extracts themes → Saves to Notion</p>
+          <p class="text-sm mb-0"><strong>Time saved:</strong> 2 hours per week</p>
+        </div>
+
+        <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <h4 class="text-lg font-bold mb-3">3. Weekly Metrics Report</h4>
+          <p class="text-sm mb-2"><strong>Tools:</strong> Google Sheets + Zapier + ChatGPT + Email</p>
+          <p class="text-sm mb-2"><strong>Flow:</strong> Every Monday 9am → Pull metrics from sheets → ChatGPT writes summary → Email to stakeholders</p>
+          <p class="text-sm mb-0"><strong>Time saved:</strong> 1 hour per week</p>
+        </div>
+
+        <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <h4 class="text-lg font-bold mb-3">4. Competitor Monitoring</h4>
+          <p class="text-sm mb-2"><strong>Tools:</strong> RSS feeds + Make + Perplexity + Notion</p>
+          <p class="text-sm mb-2"><strong>Flow:</strong> Competitor publishes → RSS detects → Perplexity analyzes → Summary to Notion database</p>
+          <p class="text-sm mb-0"><strong>Time saved:</strong> 3 hours per week</p>
+        </div>
+
+        <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <h4 class="text-lg font-bold mb-3">5. Sprint Planning Prep</h4>
+          <p class="text-sm mb-2"><strong>Tools:</strong> Jira + Zapier + Claude + Google Docs</p>
+          <p class="text-sm mb-2"><strong>Flow:</strong> Day before sprint planning → Pull tickets → Claude generates sprint goals + talking points → Doc created</p>
+          <p class="text-sm mb-0"><strong>Time saved:</strong> 45 mins per sprint</p>
+        </div>
+      </div>
+
+      <div class="mt-8 p-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+        <p class="text-lg font-bold mb-2">Total Time Saved: 10-12 hours per week</p>
+        <p class="mb-0">That's 520 hours per year. What would you do with an extra 520 hours?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category 5: Data & Analysis -->
+
+  <Features2
+    title="Category 5: Data & Analytics AI"
+    subtitle="Analyze data without being a data scientist"
+    tagline="Insights Faster"
+    items={[
+      {
+        title: 'Julius AI',
+        description: 'Upload spreadsheets, ask questions in plain English. Best for: Product metrics, customer data analysis. Pricing: Free tier, Pro £20/month.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'ChatGPT Code Interpreter',
+        description: 'Analyze data, create visualizations, run Python code. Included in ChatGPT Plus. Best for: Complex analysis, custom charts.',
+        icon: 'tabler:code-circle',
+      },
+      {
+        title: 'Hex AI',
+        description: 'AI-powered SQL and Python notebooks. Best for: Data teams, advanced PMs. Pricing: Free tier, Pro £50/month.',
+        icon: 'tabler:hexagon',
+      },
+      {
+        title: 'Tableau Pulse',
+        description: 'AI insights from Tableau dashboards. Best for: Teams already on Tableau. Pricing: Enterprise.',
+        icon: 'tabler:dashboard',
+      },
+    ]}
+  />
+
+  <!-- Bonus: Specialized Tools -->
+
+  <Features
+    title="Bonus: Specialized PM Tools"
+    subtitle="Category-specific AI tools worth knowing"
+    items={[
+      {
+        title: 'Gamma - AI Presentations',
+        description: 'Turn docs into beautiful slides instantly. Best for: Exec reviews, strategy decks. Free tier, Plus £10/month.',
+        icon: 'tabler:presentation',
+      },
+      {
+        title: 'Otter.ai - Meeting Transcription',
+        description: 'Transcribe, summarize, extract action items. Best for: Customer interviews, standups. Free tier, Pro £17/month.',
+        icon: 'tabler:microphone',
+      },
+      {
+        title: 'Miro AI',
+        description: 'AI-powered brainstorming and diagramming. Best for: Workshops, roadmapping. Free tier, paid plans from £8/month.',
+        icon: 'tabler:layout-board',
+      },
+      {
+        title: 'Figma AI',
+        description: 'AI features in Figma (auto-layout, content generation). Best for: UI mockups, design reviews. Free with Figma.',
+        icon: 'tabler:layout',
+      },
+      {
+        title: 'Loom AI',
+        description: 'AI-generated video summaries, chapters. Best for: Async updates, product demos. Free tier, Business £15/month.',
+        icon: 'tabler:video',
+      },
+      {
+        title: 'Grammarly AI',
+        description: 'AI writing assistant. Best for: Polishing docs, tone adjustment. Free tier, Premium £12/month.',
+        icon: 'tabler:writing',
+      },
+    ]}
+  />
+
+  <!-- My Recommended Stacks -->
+
+  <section class="px-4 py-16 mx-auto max-w-6xl bg-blue-50 dark:bg-slate-800">
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <h2 class="text-3xl font-bold mb-8 text-center">My Recommended Stacks (By PM Level)</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Beginner Stack -->
+        <div class="bg-white dark:bg-slate-900 rounded-lg p-6 shadow-lg">
+          <h3 class="text-xl font-bold mb-4 text-green-600">Beginner PM Stack</h3>
+          <p class="text-sm mb-4">Starting your AI journey? Start here.</p>
+          <ul class="text-sm space-y-2 mb-6">
+            <li>✅ Claude Pro (£20/mo) - Your AI thinking partner</li>
+            <li>✅ Perplexity Pro (£20/mo) - Research superpower</li>
+            <li>✅ Otter.ai Free - Meeting notes</li>
+            <li>✅ Grammarly Free - Writing polish</li>
+          </ul>
+          <p class="text-lg font-bold text-green-600">Total: £40/month</p>
+          <p class="text-sm mt-2">ROI: Save 5-8 hours/week</p>
+        </div>
+
+        <!-- Intermediate Stack -->
+        <div class="bg-white dark:bg-slate-900 rounded-lg p-6 shadow-lg border-2 border-blue-500">
+          <div class="text-xs bg-blue-500 text-white px-3 py-1 rounded-full inline-block mb-3">MOST POPULAR</div>
+          <h3 class="text-xl font-bold mb-4 text-blue-600">Builder PM Stack</h3>
+          <p class="text-sm mb-4">Ready to prototype and automate.</p>
+          <ul class="text-sm space-y-2 mb-6">
+            <li>✅ Everything in Beginner</li>
+            <li>✅ v0.dev Pro (£20/mo) - Build UIs fast</li>
+            <li>✅ Cursor (£20/mo) - Code with AI</li>
+            <li>✅ Zapier Starter (£20/mo) - Automate workflows</li>
+            <li>✅ Notion AI (£10/mo) - Smart docs</li>
+          </ul>
+          <p class="text-lg font-bold text-blue-600">Total: £110/month</p>
+          <p class="text-sm mt-2">ROI: Save 10-15 hours/week + ship MVPs</p>
+        </div>
+
+        <!-- Advanced Stack -->
+        <div class="bg-white dark:bg-slate-900 rounded-lg p-6 shadow-lg">
+          <h3 class="text-xl font-bold mb-4 text-purple-600">Advanced PM Stack</h3>
+          <p class="text-sm mb-4">Full AI-powered PM workflow.</p>
+          <ul class="text-sm space-y-2 mb-6">
+            <li>✅ Everything in Builder</li>
+            <li>✅ Julius AI Pro (£20/mo) - Data analysis</li>
+            <li>✅ GitHub Copilot (£10/mo) - Advanced coding</li>
+            <li>✅ Gamma Plus (£10/mo) - Presentations</li>
+            <li>✅ Make Pro (£9/mo) - Complex automation</li>
+          </ul>
+          <p class="text-lg font-bold text-purple-600">Total: £159/month</p>
+          <p class="text-sm mt-2">ROI: Save 15-20 hours/week + build anything</p>
+        </div>
+      </div>
+
+      <div class="mt-8 p-6 bg-white dark:bg-slate-900 rounded-lg">
+        <h4 class="text-lg font-bold mb-3">💡 My Actual Stack (What I Use Daily)</h4>
+        <p class="mb-3">As a Principal PM at Microsoft, here's what I actually pay for:</p>
+        <ul class="mb-4">
+          <li><strong>Claude Pro</strong> - My #1 tool. Use it 20+ times per day.</li>
+          <li><strong>Perplexity Pro</strong> - All my research starts here.</li>
+          <li><strong>Cursor</strong> - Building internal tools weekly.</li>
+          <li><strong>v0.dev</strong> - Prototyping UIs for customer demos.</li>
+          <li><strong>Zapier</strong> - 15 automations running constantly.</li>
+        </ul>
+        <p class="mb-0"><strong>Total:</strong> £100/month. <strong>Value:</strong> Easily 15+ hours saved weekly + ability to ship prototypes = £10,000+ annual value.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Start Guide -->
+
+  <section class="px-4 py-16 mx-auto max-w-6xl">
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <h2 class="text-3xl font-bold mb-8">Your First Week: Quick Start Guide</h2>
+
+      <div class="space-y-6">
+        <div class="border-l-4 border-blue-500 pl-6">
+          <h3 class="text-xl font-bold mb-2">Day 1: Get Your Foundation</h3>
+          <ul class="mb-0">
+            <li>Sign up for Claude (free tier to start)</li>
+            <li>Sign up for Perplexity (free tier)</li>
+            <li>Watch: "My first 30 minutes with Claude" (search YouTube)</li>
+            <li><strong>Task:</strong> Ask Claude to help you write your next standup update</li>
+          </ul>
+        </div>
+
+        <div class="border-l-4 border-green-500 pl-6">
+          <h3 class="text-xl font-bold mb-2">Day 2: First Real Use Case</h3>
+          <ul class="mb-0">
+            <li>Pick your most annoying recurring task</li>
+            <li>Ask Claude: "How can I automate [task] using AI?"</li>
+            <li><strong>Task:</strong> Use Perplexity to research a competitor. Compare to your manual process.</li>
+          </ul>
+        </div>
+
+        <div class="border-l-4 border-yellow-500 pl-6">
+          <h3 class="text-xl font-bold mb-2">Day 3: Try Prototyping</h3>
+          <ul class="mb-0">
+            <li>Sign up for v0.dev (free tier)</li>
+            <li>Describe a simple UI: "Create a customer feedback form with name, email, rating, and comments"</li>
+            <li><strong>Task:</strong> Generate 3 variations. Share with your team. Mind = blown.</li>
+          </ul>
+        </div>
+
+        <div class="border-l-4 border-purple-500 pl-6">
+          <h3 class="text-xl font-bold mb-2">Day 4: Automate Something</h3>
+          <ul class="mb-0">
+            <li>Sign up for Zapier (free tier)</li>
+            <li>Create your first Zap: Email yourself a daily summary of Slack mentions</li>
+            <li><strong>Task:</strong> Let it run for a week. Notice how much time you save.</li>
+          </ul>
+        </div>
+
+        <div class="border-l-4 border-red-500 pl-6">
+          <h3 class="text-xl font-bold mb-2">Day 5: Document Your Learning</h3>
+          <ul class="mb-0">
+            <li>Write a LinkedIn post about what you learned this week</li>
+            <li>Use Claude to help you draft it (meta!)</li>
+            <li><strong>Task:</strong> Share one specific time-saving tip with your team</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 p-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+        <h3 class="text-xl font-bold mt-0 mb-3">📊 Track Your Progress</h3>
+        <p class="mb-3">After your first week, calculate:</p>
+        <ul class="mb-3">
+          <li>Time saved on recurring tasks</li>
+          <li>New capabilities unlocked (can you build MVPs now?)</li>
+          <li>Quality improvement (better docs, faster research?)</li>
+        </ul>
+        <p class="mb-0">Most PMs save 3-5 hours in their FIRST week. By week 4, that's typically 8-12 hours/week saved.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Mistakes -->
+
+  <section class="px-4 py-16 mx-auto max-w-6xl bg-red-50 dark:bg-red-900/20">
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <h2 class="text-3xl font-bold mb-8">5 Common Mistakes PMs Make With AI (And How to Avoid Them)</h2>
+
+      <div class="space-y-6">
+        <div class="bg-white dark:bg-slate-900 rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-2 mt-0">❌ Mistake #1: Tool Overload</h3>
+          <p class="mb-2"><strong>What happens:</strong> You sign up for 20 tools in week 1. Use none of them by week 3.</p>
+          <p class="mb-0"><strong>Fix:</strong> Start with Claude + Perplexity. Master these for 30 days. Then add one tool per month.</p>
+        </div>
+
+        <div class="bg-white dark:bg-slate-900 rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-2 mt-0">❌ Mistake #2: Treating AI Like Google</h3>
+          <p class="mb-2"><strong>What happens:</strong> You ask short questions, get shallow answers, think "AI isn't that useful."</p>
+          <p class="mb-0"><strong>Fix:</strong> Give context. Better prompt: "I'm a PM at a B2B SaaS company. Our churn is 8%. Industry average is 5%. Help me diagnose root causes and create a 90-day churn reduction plan."</p>
+        </div>
+
+        <div class="bg-white dark:bg-slate-900 rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-2 mt-0">❌ Mistake #3: Not Verifying Outputs</h3>
+          <p class="mb-2"><strong>What happens:</strong> AI hallucinates data. You include it in your exec deck. Embarrassment ensues.</p>
+          <p class="mb-0"><strong>Fix:</strong> ALWAYS verify facts, data, and quotes. Use AI for drafts and ideas, not final truth.</p>
+        </div>
+
+        <div class="bg-white dark:bg-slate-900 rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-2 mt-0">❌ Mistake #4: Keeping AI a Secret</h3>
+          <p class="mb-2"><strong>What happens:</strong> You use AI, get 10x faster, but don't tell anyone. Team thinks you're just "really productive."</p>
+          <p class="mb-0"><strong>Fix:</strong> Share your AI workflows. Teach your team. Become the "AI PM" everyone wants to learn from. This is career leverage.</p>
+        </div>
+
+        <div class="bg-white dark:bg-slate-900 rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-2 mt-0">❌ Mistake #5: Learning Tools Instead of Skills</h3>
+          <p class="mb-2"><strong>What happens:</strong> You master v0.dev. Then v0 changes, or a better tool launches. Wasted time.</p>
+          <p class="mb-0"><strong>Fix:</strong> Focus on skills: prompt engineering, workflow design, AI-human collaboration. Tools change. Skills compound.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+
+  <CallToAction
+    title="Ready to Master These Tools?"
+    subtitle="This toolkit gives you the WHAT. Want to learn the HOW?"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Learn More About AI PM Coaching',
+        href: '/contact',
+      },
+    ]}
+  >
+    <Fragment slot="subtitle">
+      <p class="text-lg mb-4">
+        I'm Mayank Bhasin, Principal PM at Microsoft Windows Engineering. I teach Product Managers how to use AI to ship faster, think deeper, and build without waiting for engineers.
+      </p>
+      <p class="text-muted mb-6">
+        I've helped 100+ PMs at BrainStation and beyond go from "AI curious" to "AI capable" in 8-12 weeks.
+      </p>
+      <div class="bg-white dark:bg-slate-800 rounded-lg p-6 max-w-2xl mx-auto">
+        <h3 class="text-xl font-bold mb-4">What You'll Get From Coaching:</h3>
+        <ul class="text-left space-y-2 mb-0">
+          <li>✅ Personalized AI learning roadmap based on YOUR product and role</li>
+          <li>✅ Build 3 portfolio projects (MVPs you can show in interviews)</li>
+          <li>✅ Access to my private prompt library and automation templates</li>
+          <li>✅ Weekly 1-1 sessions + email support</li>
+          <li>✅ Community of AI-powered PMs learning together</li>
+        </ul>
+      </div>
+    </Fragment>
+  </CallToAction>
+
+  <!-- Final Resources -->
+
+  <section class="px-4 py-16 mx-auto max-w-6xl">
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <h2 class="text-3xl font-bold mb-8 text-center">Free Resources to Get Started</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <h3 class="text-lg font-bold mb-3">📝 My Blog</h3>
+          <p class="text-sm mb-3">Read my latest articles on AI for Product Managers:</p>
+          <ul class="text-sm space-y-1 mb-0">
+            <li><a href="/ai-tech-stack-guide-knowledge-workers" class="text-blue-600">→ AI Tech Stack Guide for Knowledge Workers</a></li>
+            <li><a href="/autonomous-engineering-manifesto" class="text-blue-600">→ The Autonomous Engineering Manifesto</a></li>
+            <li><a href="/blog" class="text-blue-600">→ All Articles</a></li>
+          </ul>
+        </div>
+
+        <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
+          <h3 class="text-lg font-bold mb-3">🔗 Connect With Me</h3>
+          <p class="text-sm mb-3">Follow for daily AI + PM insights:</p>
+          <ul class="text-sm space-y-1 mb-0">
+            <li><a href="https://www.linkedin.com/in/mayank-bhasin-00a46b51/" target="_blank" class="text-blue-600">→ LinkedIn (Follow me here!)</a></li>
+            <li><a href="https://github.com/mayank-bhasin" target="_blank" class="text-blue-600">→ GitHub (See my projects)</a></li>
+            <li><a href="/about" class="text-blue-600">→ About Me</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 p-6 bg-blue-50 dark:bg-slate-800 rounded-lg text-center">
+        <p class="text-lg mb-4">
+          <strong>Found this toolkit valuable?</strong>
+        </p>
+        <p class="mb-4">
+          Share it with a fellow PM who's trying to figure out this AI thing. We're all learning together.
+        </p>
+        <p class="text-sm text-muted mb-0">
+          Last updated: February 2026 | I update this quarterly as new tools emerge
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
