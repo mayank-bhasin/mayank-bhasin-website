@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Mayank Bhasin - AI & Automation Consultant
+    default: Mayank Bhasin - AI Strategy for Product Leaders
     template: '%s — Mayank Bhasin'
-  description: "AI & Automation Consultant helping UK businesses and universities implement intelligent copilots. Specializing in AI strategy, workflow automation, and AI training."
+  description: "AI strategy for product leaders and knowledge workers. Building foundational AI capabilities with proven, practical approaches that deliver measurable impact. No jargon, just clarity."
   robots:
     index: true
     follow: true
