@@ -72,7 +72,6 @@ export const footerData = {
       title: 'Connect',
       links: [
         { text: 'LinkedIn', href: 'https://www.linkedin.com/in/mayankbhasin/' },
-        { text: 'GitHub', href: 'https://github.com/mayank-bhasin' },
         { text: 'Contact Me', href: getPermalink('/contact') },
       ],
     },
@@ -80,7 +79,6 @@ export const footerData = {
   secondaryLinks: [],
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/mayankbhasin/' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/mayank-bhasin' },
   ],
   footNote: `
     © ${new Date().getFullYear()} Clarity AI by Mayank Bhasin. All rights reserved.
