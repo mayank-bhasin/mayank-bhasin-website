@@ -1,0 +1,262 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Sprint, Stack, Studio — Ship one real AI thing | Clarity AI',
+  description:
+    'Three ways to build with AI: weekend Sprints, 4-week Stacks, and 6-8 week 1:1 Studios. Each tier ships a deliverable, not a curriculum.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+
+  <Hero
+    tagline="Clarity AI"
+    title="Don't take another AI course. Ship one real AI thing."
+  >
+    <Fragment slot="subtitle">
+      <p class="text-lg mb-4">
+        Sprint, Stack, Studio. Three ways to build with AI — pick the one that matches the thing you want to ship.
+      </p>
+      <p class="text-muted">
+        Every tier sells a <strong>deliverable</strong>, not hours. You leave with something working.
+      </p>
+    </Fragment>
+  </Hero>
+
+  <!-- The build ladder -->
+
+  <section class="px-4 py-12 mx-auto max-w-6xl">
+    <h2 class="text-3xl font-bold text-center mb-3">The build ladder</h2>
+    <p class="text-center text-muted mb-10 max-w-2xl mx-auto">
+      Start small, level up. Each tier is a real build, not a curriculum.
+    </p>
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="#sprint" class="block text-center p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 transition">
+        <div class="text-sm uppercase tracking-wide text-blue-600 font-bold mb-2">Tier 1</div>
+        <h3 class="text-2xl font-bold mb-3">Sprint</h3>
+        <p class="text-muted text-sm">One weekend. One skill. One artefact you can show on Monday.</p>
+      </a>
+      <a href="#stack" class="block text-center p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-green-500 transition">
+        <div class="text-sm uppercase tracking-wide text-green-600 font-bold mb-2">Tier 2</div>
+        <h3 class="text-2xl font-bold mb-3">Stack</h3>
+        <p class="text-muted text-sm">Four weeks. Build the personal AI stack you actually run your week on.</p>
+      </a>
+      <a href="#studio" class="block text-center p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-500 transition">
+        <div class="text-sm uppercase tracking-wide text-purple-600 font-bold mb-2">Tier 3</div>
+        <h3 class="text-2xl font-bold mb-3">Studio</h3>
+        <p class="text-muted text-sm">Six to eight weeks, 1:1. Ship a portfolio-grade agent or product.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Sprint -->
+
+  <section id="sprint" class="px-4 py-12 mx-auto max-w-6xl">
+    <div class="bg-blue-50 dark:bg-slate-800 rounded-xl p-8 md:p-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-1">
+          <div class="text-sm uppercase tracking-wide text-blue-600 font-bold mb-2">Sprint</div>
+          <h3 class="text-3xl font-bold mb-2">£49–79</h3>
+          <p class="text-sm text-muted mb-6">Self-serve · 60–90 mins</p>
+          <p class="text-sm">For people who want one specific skill, this weekend.</p>
+        </div>
+        <div class="md:col-span-2">
+          <p class="text-lg font-bold mb-4">One weekend. One skill. One artefact.</p>
+          <p class="mb-4">
+            A build-along video plus the template. Press play, follow along, walk away with a working thing — not notes, not a PDF.
+          </p>
+          <p class="font-bold mb-3">Example Sprints in the pipeline:</p>
+          <ul class="space-y-2 mb-6 list-none pl-0">
+            <li>→ Ship a research agent that watches 5 competitors and emails you a Monday digest</li>
+            <li>→ Build a Slack bot that summarises PRD comments into action items</li>
+            <li>→ Wire a meeting-notes pipeline (transcript → action items → calendar invites)</li>
+            <li>→ Build a personal "second brain" agent over your Notion and Google Docs</li>
+          </ul>
+          <div class="bg-white dark:bg-slate-900 rounded-lg p-5">
+            <p class="font-bold mb-2">Be first in line.</p>
+            <p class="text-sm text-muted mb-4">
+              Sprint #1 launches soon. Drop your email and you'll know before anyone else — and get the launch discount.
+            </p>
+            <a href="/contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg no-underline">Join the waitlist →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack -->
+
+  <section id="stack" class="px-4 py-12 mx-auto max-w-6xl">
+    <div class="bg-green-50 dark:bg-slate-800 rounded-xl p-8 md:p-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-1">
+          <div class="text-sm uppercase tracking-wide text-green-600 font-bold mb-2">Stack</div>
+          <h3 class="text-3xl font-bold mb-2">£249–399</h3>
+          <p class="text-sm text-muted mb-6">4 weeks · 8–12 builders</p>
+          <p class="text-sm">For people who want accountability, peers, and a real stack — not just one tool.</p>
+        </div>
+        <div class="md:col-span-2">
+          <p class="text-lg font-bold mb-4">Four weeks. Live cohort. The AI stack you actually run your week on.</p>
+          <p class="mb-4">
+            By the end you've connected 3–4 tools into a working personal system — research, writing, automations, and a custom agent — running daily.
+          </p>
+          <p class="font-bold mb-3">How it runs:</p>
+          <ul class="space-y-2 mb-6 list-none pl-0">
+            <li>→ <strong>Week 1:</strong> Live kickoff. Set your stack goal and pick your three tools.</li>
+            <li>→ <strong>Weeks 2–3:</strong> Async builds with weekly check-ins. Sprints inside the cohort.</li>
+            <li>→ <strong>Week 4:</strong> Demo day. Show your stack. Get feedback. Walk away with it running.</li>
+          </ul>
+          <p class="text-sm text-muted mb-4">First cohort runs live so I can teach close to the build. Capped at 12.</p>
+          <a href="/contact" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-5 rounded-lg no-underline">Apply for the first cohort →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio -->
+
+  <section id="studio" class="px-4 py-12 mx-auto max-w-6xl">
+    <div class="bg-purple-50 dark:bg-slate-800 rounded-xl p-8 md:p-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-1">
+          <div class="text-sm uppercase tracking-wide text-purple-600 font-bold mb-2">Studio</div>
+          <h3 class="text-3xl font-bold mb-2">£1,200–2,500</h3>
+          <p class="text-sm text-muted mb-6">6–8 weeks · 1:1 · capped 4–6</p>
+          <p class="text-sm">For people shipping something serious — a product, a portfolio piece, an internal tool that earns its keep.</p>
+        </div>
+        <div class="md:col-span-2">
+          <p class="text-lg font-bold mb-4">Six to eight weeks, 1:1. Ship a portfolio-grade agent.</p>
+          <p class="mb-4">
+            I work with you weekly on a real build you care about — scoping, architecture, prompts, evals, ship. You leave with a working agent or product, not a deck.
+          </p>
+          <p class="font-bold mb-3">What's included:</p>
+          <ul class="space-y-2 mb-6 list-none pl-0">
+            <li>→ Weekly 1:1 working sessions (we build, not just talk)</li>
+            <li>→ Private prompt + skills library</li>
+            <li>→ Direct line for the in-between blockers</li>
+            <li>→ Final ship review with launch checklist</li>
+          </ul>
+          <p class="text-sm text-muted mb-4">Four to six slots per cohort. Discovery call first to make sure the scope fits.</p>
+          <a href="https://calendly.com/mayankbhasin007/new-meeting" target="_blank" rel="noopener" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-5 rounded-lg no-underline">Book a discovery call →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credit mechanic -->
+
+  <section class="px-4 py-12 mx-auto max-w-4xl">
+    <div class="text-center bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-8">
+      <h3 class="text-2xl font-bold mb-3">Start where you want. Your money rolls forward.</h3>
+      <p class="text-lg mb-0">
+        100% of what you pay at one tier credits toward the next tier within 30 days. Outgrow a Sprint? It's a deposit on a Stack.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why me -->
+
+  <section class="px-4 py-16 mx-auto max-w-4xl">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold mb-6">Why learn this from me</h2>
+      <p class="text-lg mb-4">
+        I'm Mayank — Principal PM at Microsoft, 21+ years shipping product. I actually <strong>build</strong> AI agents. I don't just teach about them.
+      </p>
+      <p class="text-muted mb-6">
+        Every Sprint, Stack, and Studio is something I've shipped, or am shipping right now. You're not learning theory — you're getting taught the exact build I just walked.
+      </p>
+      <a href="/about" class="text-blue-600 font-bold hover:underline">More about my background →</a>
+    </div>
+  </section>
+
+  <!-- What this is NOT -->
+
+  <section class="px-4 py-16 bg-gray-50 dark:bg-slate-900">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center">What this is NOT</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-lg">
+          <h3 class="text-lg font-bold mb-2 text-red-600 mt-0">❌ Not lectures</h3>
+          <p class="text-sm mb-0">No 90-minute Zoom monologues on "what is an LLM." If you want lectures, YouTube already won.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-lg">
+          <h3 class="text-lg font-bold mb-2 text-red-600 mt-0">❌ Not a 12-week theory bootcamp</h3>
+          <p class="text-sm mb-0">No transformer architecture deep-dives. We build. The theory you need shows up when you need it.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-lg">
+          <h3 class="text-lg font-bold mb-2 text-red-600 mt-0">❌ Not another curriculum to half-finish</h3>
+          <p class="text-sm mb-0">Every tier ships a thing. If you don't ship, I haven't done my job.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-lg">
+          <h3 class="text-lg font-bold mb-2 text-green-600 mt-0">✅ What it IS</h3>
+          <p class="text-sm mb-0">Build-along. Ship the thing. Walk away with something working — and the muscle memory to do it again without me.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+
+  <section class="px-4 py-16 mx-auto max-w-3xl">
+    <h2 class="text-3xl font-bold mb-8 text-center">Quick questions</h2>
+    <div class="space-y-6">
+      <div>
+        <h3 class="font-bold text-lg mb-2">Do I need to code?</h3>
+        <p class="text-muted mb-0">
+          No. Sprints and Stacks are built for non-engineers — no-code tools, prompt engineering, simple wiring. Studio can go deeper if that's what you want to ship.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-2">Cohort or async?</h3>
+        <p class="text-muted mb-0">
+          Sprint is async (self-serve). Stack runs as a live cohort for the first few rounds — you learn faster with peers and a real demo day. Studio is fully 1:1.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-2">What if I don't finish?</h3>
+        <p class="text-muted mb-0">
+          If you don't ship the artefact at the tier you signed up for, your money rolls into the next attempt. The deal is that you ship — not that you attend.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-2">Can my company pay?</h3>
+        <p class="text-muted mb-0">
+          Yes — Stack and Studio are both invoiced through Clarity AI for L&D budgets. Many companies cover 100% of upskilling like this.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-link to Mentoring -->
+
+  <section class="px-4 py-12 mx-auto max-w-3xl">
+    <div class="text-center border border-gray-200 dark:border-gray-700 rounded-xl p-6">
+      <p class="text-base mb-2">
+        Looking for <strong>1:1 career mentoring</strong> instead of a build?
+      </p>
+      <p class="text-sm text-muted mb-4">
+        Career strategy, PM interview prep, AI career pivots — across ADPList, MentorCruise, Topmate, BrainStation, and more.
+      </p>
+      <a href="/mentoring" class="text-blue-600 font-bold hover:underline">See mentoring options →</a>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+
+  <CallToAction
+    title="Not sure which tier is yours?"
+    subtitle="15 minutes on a call. I'll help you pick — or tell you it's not the right fit."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a 15-min call',
+        href: 'https://calendly.com/mayankbhasin007/new-meeting',
+        target: '_blank',
+      },
+    ]}
+  />
+</Layout>

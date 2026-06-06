@@ -15,6 +15,10 @@ export const headerData = {
       href: getPermalink('/mentoring'),
     },
     {
+      text: 'Skills',
+      href: getPermalink('/skills'),
+    },
+    {
       text: 'Portfolio',
       href: getPermalink('/portfolio'),
     },
@@ -45,6 +49,7 @@ export const footerData = {
         { text: 'Home', href: getPermalink('/') },
         { text: 'About', href: getPermalink('/about') },
         { text: 'Mentoring', href: getPermalink('/mentoring') },
+        { text: 'Skills', href: getPermalink('/skills') },
         { text: 'Portfolio', href: getPermalink('/portfolio') },
         { text: 'Blog', href: getBlogPermalink() },
         { text: 'Contact', href: getPermalink('/contact') },
