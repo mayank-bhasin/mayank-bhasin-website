@@ -1,6 +1,6 @@
 site:
   name: Clarity AI
-  site: 'https://mayank-bhasin.github.io'
+  site: 'https://mayank-bhasin.vercel.app'
   base: '/'
   trailingSlash: false
 
